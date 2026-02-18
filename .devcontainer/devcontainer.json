@@ -1,7 +1,7 @@
 {
-  "name": "Python 3",
-  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.13",
-  "forwardPorts": [8000],
+  "name": "Python 3 with MongoDB",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13-ubuntu-24.04",
+  "forwardPorts": [8000, 27017],
   "postCreateCommand": "bash ./.devcontainer/postCreate.sh",
   "postStartCommand": "bash ./.devcontainer/postStart.sh",
   "customizations": {
@@ -11,6 +11,11 @@
         "ms-python.python",
         "ms-python.debugpy"
       ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/mongodb:1": {
+      "version": "7.0"
     }
   }
 }
