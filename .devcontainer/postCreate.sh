@@ -1,6 +1,5 @@
-# Prepare python environment
+#!/bin/bash
+# postCreate.sh
 pip install -r src/requirements.txt
-
-# Prepare MongoDB Development DB
-./.devcontainer/installMongoDB.sh
-./.devcontainer/startMongoDB.sh
+# Opcional: Cargar datos iniciales en Mongo
+# mongosh --eval "db.init.insert({status: 'ready'})"
